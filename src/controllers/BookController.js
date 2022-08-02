@@ -6,21 +6,21 @@ class BookController {
         return new Promise((resolve, _) => resolve(db));
     }
 
-    // async createBook(formBook) {
-    //     return new Promise((resolve, _) => {
-    //         let newId = data.find((todo) => { 
+    async createBook(formBook) {
+        return new Promise((resolve, _) => {
+            let newId = data.find((todo) => { 
                 
-    //             todo.id === parseInt(id)}
-    //         );
+                todo.id === parseInt(id)}
+            );
 
-    //         let newBook = {
-    //             id: newId, 
-    //             ...formBook
-    //         };
+            let newBook = {
+                id: newId, 
+                ...formBook
+            };
 
-    //         resolve(newBook);
-    //     })
-    // } 
+            resolve(newBook);
+        });
+    } 
 
 }
 
